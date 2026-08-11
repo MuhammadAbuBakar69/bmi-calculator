@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #334155;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.medical-app-container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.bmi-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.bmi-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 20px;
+}
+
+.header-icon {
+  font-size: 2.2rem;
+  background-color: #f0fdf4;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #bbf7d0;
+}
+
+.bmi-header h1 {
+  font-size: 1.6rem;
+  color: #0f172a;
+}
+
+.bmi-header p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.bmi-form {
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.input-group input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #cbd5e1;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #0d9488;
+}
+
+.calc-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #0d9488;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calc-btn:hover {
+  background-color: #0f766e;
+}
+
+/* Result Card */
+.result-section {
+  border-radius: 14px;
+  padding: 20px;
+  border: 1.5px solid;
+  margin-bottom: 28px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.result-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+
+}
+
+.result-category {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  background: white;
+}
+
+.result-value {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.result-desc {
+  font-size: 0.9rem;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.range-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 2px;
+}
+
+.segment {
+  flex: 1;
+  font-size: 0;
+}
+
+.seg-under { background-color: #38bdf8; }
+.seg-normal { background-color: #4ade80; }
+.seg-over { background-color: #fbbf24; }
+.seg-obese { background-color: #f87171; }
+
+/* History Section */
+.history-section {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.history-header h3 {
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  text-decoration: underline;
+}
+
+.no-history {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-align: center;
+  padding: 12px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.history-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.history-bmi {
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.history-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.history-meta {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.history-date {
+  margin-left: 4px;
+}
+
+.delete-item-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.delete-item-btn:hover {
+  color: #ef4444;
+}
